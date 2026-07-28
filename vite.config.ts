@@ -33,7 +33,8 @@ export default defineConfig({
         'icons/pwa-192x192.png',
         'icons/pwa-512x512.png',
         'icons/apple-touch-icon.png',
-        '.nojekyll',
+        // Do NOT include .nojekyll here — GitHub Pages does not serve
+        // dotfiles over HTTP, and Workbox precache would fail install.
       ],
       manifest: {
         name: 'Farmer Payment – URVARA',
