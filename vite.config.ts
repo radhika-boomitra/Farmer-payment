@@ -18,8 +18,8 @@ function figmaAssetResolver() {
 }
 
 export default defineConfig({
-  // GitHub Pages project site: https://<user>.github.io/farmer-payment/
-  base: '/farmer-payment/',
+  // GitHub Pages project site: https://<user>.github.io/Farmer-payment/
+  base: '/Farmer-payment/',
   plugins: [
     figmaAssetResolver(),
     // The React and Tailwind plugins are both required for Make, even if
@@ -44,7 +44,7 @@ export default defineConfig({
         background_color: '#fefefb',
         display: 'standalone',
         orientation: 'any',
-        // Relative to base so GitHub Pages scope is /farmer-payment/
+        // Relative to base so GitHub Pages scope is /Farmer-payment/
         start_url: './',
         scope: './',
         icons: [
@@ -75,7 +75,7 @@ export default defineConfig({
         ],
         // Large farmer photos exceed Workbox's default 2 MiB limit
         maximumFileSizeToCacheInBytes: 10 * 1024 * 1024,
-        navigateFallback: '/farmer-payment/index.html',
+        navigateFallback: '/Farmer-payment/index.html',
         navigateFallbackDenylist: [/^\/api/],
         runtimeCaching: [
           {

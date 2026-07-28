@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.1",
   "type": "module",
-  "homepage": "https://radhika-boomitra.github.io/farmer-payment",
+  "homepage": "https://radhika-boomitra.github.io/Farmer-payment",
   "scripts": {
     "build": "vite build",
     "dev": "vite",
