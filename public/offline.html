@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#004752" />
+    <title>Offline – Farmer Payment</title>
+    <style>
+      * { box-sizing: border-box; }
+      html, body {
+        height: 100%;
+        margin: 0;
+        font-family: Inter, Figtree, system-ui, sans-serif;
+        background: #fefefb;
+        color: #1d1d1f;
+      }
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+      }
+      .card {
+        max-width: 420px;
+        text-align: center;
+      }
+      .dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: #b45309;
+        display: inline-block;
+        margin-bottom: 16px;
+      }
+      h1 {
+        margin: 0 0 12px;
+        font-size: 1.5rem;
+        color: #004752;
+      }
+      p {
+        margin: 0 0 24px;
+        line-height: 1.5;
+        color: #525252;
+      }
+      button {
+        background: #87c45f;
+        color: #fefefb;
+        border: none;
+        border-radius: 9999px;
+        padding: 12px 28px;
+        font-size: 1rem;
+        font-weight: 700;
+        cursor: pointer;
+      }
+      button:hover { background: #76b34f; }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <span class="dot" aria-hidden="true"></span>
+      <h1>You're offline</h1>
+      <p>
+        Some resources aren't available right now. Reconnect to the internet,
+        or go back to the cached Farmer Payment app if you've visited before.
+      </p>
+      <button type="button" onclick="window.location.href='./'">
+        Open cached app
+      </button>
+    </div>
+  </body>
+</html>
