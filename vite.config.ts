@@ -18,8 +18,9 @@ function figmaAssetResolver() {
 }
 
 export default defineConfig({
-  // GitHub Pages project site: https://<user>.github.io/Farmer-payment/
-  base: '/Farmer-payment/',
+  // Custom domain serves the site at the domain root (not /Farmer-payment/).
+  // https://farmer-payout.boomitra.com/
+  base: '/',
   plugins: [
     figmaAssetResolver(),
     // The React and Tailwind plugins are both required for Make, even if
@@ -33,8 +34,8 @@ export default defineConfig({
         'icons/pwa-192x192.png',
         'icons/pwa-512x512.png',
         'icons/apple-touch-icon.png',
-        // Do NOT include .nojekyll here — GitHub Pages does not serve
-        // dotfiles over HTTP, and Workbox precache would fail install.
+        // Do NOT include .nojekyll or CNAME in precache — GitHub may not
+        // serve them as normal assets, which would break SW install.
       ],
       manifest: {
         name: 'Farmer Payment – URVARA',
@@ -45,7 +46,7 @@ export default defineConfig({
         background_color: '#fefefb',
         display: 'standalone',
         orientation: 'any',
-        // Relative to base so GitHub Pages scope is /Farmer-payment/
+        // Relative paths resolve correctly on the custom domain root
         start_url: './',
         scope: './',
         icons: [
@@ -76,7 +77,7 @@ export default defineConfig({
         ],
         // Large farmer photos exceed Workbox's default 2 MiB limit
         maximumFileSizeToCacheInBytes: 10 * 1024 * 1024,
-        navigateFallback: '/Farmer-payment/index.html',
+        navigateFallback: '/index.html',
         navigateFallbackDenylist: [/^\/api/],
         runtimeCaching: [
           {
